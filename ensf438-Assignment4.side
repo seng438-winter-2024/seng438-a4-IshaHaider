@@ -1,0 +1,473 @@
+{
+  "id": "ad99dfb0-08a9-4336-88d7-33fe1351eeac",
+  "version": "2.0",
+  "name": "ensf438-Assignment4",
+  "url": "https://www.samsung.com/ca/",
+  "tests": [{
+    "id": "501d5efe-ee76-4d5e-81b8-25552693947e",
+    "name": "Search Engine",
+    "commands": [{
+      "id": "cd77537f-8e9c-4ea3-865a-f88b1e729fc4",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.samsung.com/ca/ai-search/?searchvalue=galaxy%20z%20flip5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82cf8bc2-b9ae-4f9e-9330-55d7b0b3f05b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x870",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88a4fc32-2c4c-47e5-a8d7-8585f4840326",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8acdaf5-d0ed-45fa-93d2-21d3ddbf3276",
+      "comment": "",
+      "command": "click",
+      "target": "css=.query-input__form-submit > svg",
+      "targets": [
+        ["css=.query-input__form-submit > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d73bc37-8176-42b5-b712-9a524cd06c54",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "136bda65-39ad-4af7-9fee-f3346e2e3d57",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Galaxy Z Flip5",
+      "targets": [
+        ["linkText=Galaxy Z Flip5", "linkText"],
+        ["css=.result-list__wrap > .result-list__item:nth-child(1) .result-title__link", "css:finder"],
+        ["xpath=//div[@id='product']/div/div[2]/div[2]/ul/li/div/div[2]/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/smartphones/galaxy-z/galaxy-z-flip5-mint-256gb-sm-f731wlgaxac/')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/div/div[2]/h3/a", "xpath:position"]
+      ],
+      "value": "Galaxy Z Flip5"
+    }]
+  }, {
+    "id": "943695a0-ff1b-4d60-bf65-ade0b5affb8d",
+    "name": "Home page",
+    "commands": [{
+      "id": "6587f39e-a175-4160-8e9a-c00f6e8b67e2",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.samsung.com/ca/ai-search/?searchvalue=galaxy%20z%20flip5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "520c164d-3af7-4119-993e-20aa69f23757",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x870",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5ba1be8-58ef-468c-ad11-004f05276bc1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nv00-gnb__logo > .icon",
+      "targets": [
+        ["css=.nv00-gnb__logo > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e9809a0-0a30-461a-b2b3-cda90a8a284d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.nv00-gnb__logo > .icon",
+      "targets": [
+        ["css=.nv00-gnb__logo > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd02419a-e51c-4676-99f7-0446500e7bcb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nv00-gnb__logo > .icon",
+      "targets": [
+        ["css=.nv00-gnb__logo > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "addb3404-ee64-4b91-bbf9-757b518e1478",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf6e0102-36e7-431b-ae5a-075b29c1b106",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c2a3e32e-39c7-479b-a4fd-aa4147ed2bfa",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,114)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bcf310b7-7a2a-4f63-963f-861a8f43f098",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,528)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77656dcb-94b6-4e40-938e-4153d7aa2cf3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cm-g-text-block-container:nth-child(3) .text-block-container__headline",
+      "targets": [
+        ["css=.cm-g-text-block-container:nth-child(3) .text-block-container__headline", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div/div[3]/section/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Newest Offers and Innovations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5fdea7f-9de3-43b3-9775-8b3565c494d3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.cm-g-text-block-container:nth-child(3) .text-block-container__headline",
+      "targets": [
+        ["css=.cm-g-text-block-container:nth-child(3) .text-block-container__headline", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div/div[3]/section/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Newest Offers and Innovations')]", "xpath:innerText"]
+      ],
+      "value": "Newest Offers and Innovations"
+    }]
+  }, {
+    "id": "254d1d07-68f5-48b3-b958-3c4460c2105c",
+    "name": "Offers Tab",
+    "commands": [{
+      "id": "bf356893-9b57-4949-865a-691e0606c2ce",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.samsung.com/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fad9194-0fdb-4506-9be4-c57e1eaf994e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x870",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63b9e3da-baf2-4a3c-979f-f5f4cacf33f5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,954)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60e3de52-8bdb-4578-9c00-107e0718e9fd",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1709)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90919336-6469-46a9-831d-018ac45cfdfe",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2259.5)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21d27086-09f5-42c2-b275-70d941332ab4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3067)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9043c7cc-744f-4b77-89b0-c899b0fdc338",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Offers",
+      "targets": [
+        ["linkText=Offers", "linkText"],
+        ["css=.footer-column__item:nth-child(3) .footer-category__item:nth-child(1) > .footer-category__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Offers')])[15]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div[2]/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '//shop.samsung.com/ca/promotions')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "164b7564-77fb-4ed1-9635-cf9eb60b977e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db37289b-a4a0-4106-a607-27d0e82c9852",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.textblock__title",
+      "targets": [
+        ["css=.textblock__title", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div/div/div[2]/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Samsung Offers')]", "xpath:innerText"]
+      ],
+      "value": "Samsung Offers"
+    }]
+  }, {
+    "id": "5c436f8c-ddac-4103-aae3-35860f4d8151",
+    "name": "Company Info",
+    "commands": [{
+      "id": "b3f06a20-8a49-4c2f-8df6-dea65e68313b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.samsung.com/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74745228-d6ee-41be-b52a-e42c846bd251",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x870",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "003c5cc9-ea04-4584-8f2f-d523ec46ae8b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3070)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f865d53-50f4-46d7-8206-d0fb65318bfb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,6759)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71762e88-d636-46f4-afb3-a5d3ceaf21c4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Company Info",
+      "targets": [
+        ["linkText=Company Info", "linkText"],
+        ["css=.footer-category:nth-child(2) .footer-category__item:nth-child(1) > .footer-category__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Company Info')]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div[5]/div[2]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ca/about-us/company-info/')]", "xpath:href"],
+        ["xpath=//div[5]/div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Company Info')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1670ee09-a6a0-4c7a-b8c0-b11398181f1d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Company Info",
+      "targets": [
+        ["linkText=Company Info", "linkText"],
+        ["css=.footer-category:nth-child(2) .footer-category__item:nth-child(1) > .footer-category__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Company Info')]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div[5]/div[2]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ca/about-us/company-info/')]", "xpath:href"],
+        ["xpath=//div[5]/div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Company Info')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab31ab0f-45e1-42f7-8ac6-a35b49d2741d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dt > .explore-lnb__dropdown:nth-child(1) div",
+      "targets": [
+        ["css=.dt > .explore-lnb__dropdown:nth-child(1) div", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div/div/div/div/div/div[2]/div/div/div/div/a/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/a/div", "xpath:position"]
+      ],
+      "value": "Company\\nInfo."
+    }]
+  }, {
+    "id": "67a52e2c-441c-455f-8cae-7d01213a4d92",
+    "name": "Smartphones Tab",
+    "commands": [{
+      "id": "e55ac7c1-1a88-480b-b531-dff052296329",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.samsung.com/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27ad9f33-6b70-4fbf-abd7-4ed57c9e29d4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x870",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6485da5c-2869-4373-8b64-66e77be3f039",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3249)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "626e6796-4276-41f7-ad13-58825397b9fc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=TVs",
+      "targets": [
+        ["linkText=TVs", "linkText"],
+        ["css=.footer-column__item:nth-child(2) .footer-category__item:nth-child(6) > .footer-category__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'TVs')])[19]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div/div/div/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/tvs/')])[46]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d223b492-338e-4119-8054-88dc87bbec42",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=TVs",
+      "targets": [
+        ["linkText=TVs", "linkText"],
+        ["css=.footer-column__item:nth-child(2) .footer-category__item:nth-child(6) > .footer-category__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'TVs')])[19]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div/div/div/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/tvs/')])[46]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06ee3847-5892-443f-a6cf-65f4d88d34d4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Smartphones",
+      "targets": [
+        ["linkText=Smartphones", "linkText"],
+        ["css=.footer-column__item:nth-child(2) .footer-category__item:nth-child(1) > .footer-category__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Smartphones')])[2]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/smartphones/')])[30]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83ee9af4-ccf4-46b8-8bc7-4ce489e2a5c0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,48)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cb42fc5-41e5-4bcf-a4b4-f4066b149f23",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa022001-03bc-42df-8295-7f680bce34c1",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Smartphones",
+      "targets": [
+        ["linkText=Smartphones", "linkText"],
+        ["css=h1 > .nv14-visual-lnb__menu-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Smartphones')])[2]", "xpath:link"],
+        ["xpath=//div[@id='component-id']/div/div/div/ul/li/h1/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/smartphones/')])[7]", "xpath:href"],
+        ["xpath=//h1/a", "xpath:position"]
+      ],
+      "value": "Smartphones"
+    }]
+  }, {
+    "id": "e3ca1d6a-f0d5-4413-9ff8-04a1e74494b6",
+    "name": "TV Page",
+    "commands": [{
+      "id": "ce9b87a0-f8e5-4324-ac56-a147d694b822",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.samsung.com/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "753147c3-8213-4642-85d7-269bc7cbc4f6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x870",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93bdd8f0-ab4f-42e0-a06b-ef2de7e56130",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,767)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "417a687d-233a-4047-bc8a-26bec3f3d8b2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,6778)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3058d7ea-8967-4d43-807d-e23bba96d126",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=TVs",
+      "targets": [
+        ["linkText=TVs", "linkText"],
+        ["css=.footer-column__item:nth-child(2) .footer-category__item:nth-child(6) > .footer-category__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'TVs')])[19]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div/div/div/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/tvs/')])[56]", "xpath:href"],
+        ["xpath=//div/div/div/div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bb0ac3f-9a26-41be-868a-c03fa6da4f5b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=em",
+      "targets": [
+        ["css=em", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div/div/section/div/div/div/h1/strong/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"],
+        ["xpath=//em[contains(.,'TVs')]", "xpath:innerText"]
+      ],
+      "value": "TVs"
+    }]
+  }],
+  "suites": [{
+    "id": "f32ddb03-a90f-4a11-900f-6c1ea51ec02a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.samsung.com/ca/", "https://www.samsung.com/ca/offer/tvav/", "https://shop.samsung.com/ca/cart", "https://www.samsung.com/ca/ai-search/?searchvalue=galaxy%20z%20flip5", "https://www.samsung.com/ca/offer/"],
+  "plugins": []
+}
