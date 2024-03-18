@@ -5,17 +5,144 @@
 | Group \#:      |     |
 | -------------- | --- |
 | Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Saba           |     |
+| Isha           |     |
+| Zahwa          |     |
 
 # Introduction
-
+In this laboratory, students are introduced to the nuanced field of software testing, with a focus on mutation testing and GUI testing. Initially, participants will use a mutation testing tool to assess and improve the quality of Java test suites. The lab then transitions to GUI testing, where students will design and automate test cases using Selenium, comparing its effectiveness with Sikulix. This exercise aims to refine students' technical skills and provide insights into the critical evaluation of testing tools and methodologies in software quality assurance.
 
 # Analysis of 10 Mutants of the Range class 
 
+**1. KILLED: Test Case: `testExpandWithFlippedMargins()`**
+
+    PIT Report: Killed Mutant (Negated Conditional)
+    The PIT report indicates that a mutant with the description "901: negated conditional" was killed. This means that PIT has introduced a change to the conditional logic within the `Range` class, inverting some condition's logic (e.g., changing `if (a < b)` to `if (a >= b)`), and the test suite detected this change, causing at least one test to fail.
+    
+    The test `testExpandWithFlippedMargins()` is responsible for killing this mutant. The assertion in line 901 that checks the relationship between the lower and upper bounds of the range would fail if the condition within the `Range.expand` method was negated, as it would produce a range that violates this assertion.
+    
+    Analysis
+    - The test case is effective as it was able to detect and kill a mutant that introduced a fault into the program, which suggests good fault detection capability for this particular scenario.
+    - The "negated conditional" mutation is a common way to introduce faults, particularly in boundary checking or logical flow control, and having a test case that kills this mutant increases confidence in the test suite's coverage.
+    - Since the mutant was killed, this means your test suite is correctly designed to catch such a fault. It indicates that the conditions inside the `Range.expand` method are being exercised by the test cases to catch inverted logic.
+    - However, since the PIT summary report previously indicated low overall mutation coverage, you should aim to increase the mutation coverage by identifying more edge cases or logical paths within the code that are not currently being tested.
+
+**2. KILLED: Test Case: `testIntersects()`**
+
+    PIT Report: Killed Mutant (Negated Conditional)
+    The PIT report indicates that a mutant with the description "Negated Conditional" was killed. This mutation involved inverting the conditional logic within the `intersects` method, such as changing `if (b0 <= this.lower)` to `if (b0 > this.lower)`. The test suite successfully detected this change, causing the test case `testIntersects()` to fail.
+    
+    Analysis:
+    - The `testIntersects()` test case effectively detected and killed a mutant that introduced a fault by negating the conditional logic within the `intersects` method.
+    - This mutation is a common way to introduce faults, especially in boundary checking scenarios, and the fact that the test suite was able to catch it indicates good fault detection capability.
+    - Since the mutant was killed, it suggests that the conditions inside the `intersects` method are adequately covered by the test cases to identify changes in logic.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's essential to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**3. KILLED: Test Case: `testConstrainWithValueWithinRange()`**
+
+    PIT Report: Killed Mutant (Changed Comparison Operator)
+    The PIT report indicates that a mutant with the description "Changed Comparison Operator" was killed. This mutation involved altering the comparison operator within the `constrain` method, such as changing `value > this.upper` to `value >= this.upper`. The test suite successfully detected this change, causing the test case `testConstrainWithValueWithinRange()` to fail.
+    
+    Analysis:
+    - The `testConstrainWithValueWithinRange()` test case effectively detected and killed a mutant that introduced a fault by changing the comparison operator within the `constrain` method.
+    - This mutation is significant as it alters the logic for handling values within the range boundary.
+    - The test case's failure indicates that it expects a specific behavior from the `constrain` method, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the conditions inside the `constrain` method to identify changes in logic.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**4. KILLED: Test Case: `testCombineWithBothRangesNonNull()`**
+
+    PIT Report: Killed Mutant (Swapped Null Check Condition)
+    The PIT report indicates that a mutant with the description "Swapped Null Check Condition" was killed. This mutation involved swapping the order of null check conditions within the `combine` method, such as changing `if (range1 == null)` to `if (range2 == null)`. The test suite successfully detected this change, causing the test case `testCombineWithBothRangesNonNull()` to fail.
+    
+    Analysis:
+    - The `testCombineWithBothRangesNonNull()` test case effectively detected and killed a mutant that introduced a fault by swapping the order of null check conditions within the `combine` method.
+    - This mutation is critical as it alters the logic for handling null ranges.
+    - The test case's failure indicates that it expects a specific behavior from the `combine` method, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the conditions inside the `combine` method to identify changes in logic.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**5. KILLED: Test Case: `testExpandWithZeroMargins()`**
+
+    PIT Report: Killed Mutant (Changed Arithmetic Operation)
+    The PIT report indicates that a mutant with the description "Changed Arithmetic Operation" was killed. This mutation involved altering the arithmetic operation within the `expand` method, such as changing `lower = lower / 2.0 + upper / 2.0;` to `lower = lower * 2.0 + upper / 2.0;`. The test suite successfully detected this change, causing the test case `testExpandWithZeroMargins()` to fail.
+    
+    Analysis:
+    - The `testExpandWithZeroMargins()` test case effectively detected and killed a mutant that introduced a fault by changing the arithmetic operation within the `expand` method.
+    - This mutation is significant as it alters the computation of the lower bound of the expanded range.
+    - The test case's failure indicates that it expects a specific behavior from the `expand` method, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the computation logic inside the `expand` method to identify changes in arithmetic operations.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**6. KILLED: Test Case: `testExpandWithPositiveMargins()`**
+
+    PIT Report: Killed Mutant (Faulty Logic in Upper Margin Calculation)
+    The PIT report indicates that a mutant with the description "Faulty Logic in Upper Margin Calculation" was killed. This mutation involved introducing faulty logic in the upper margin calculation within the `expand` method. For example, changing `double upper = range.getUpperBound() + length * upperMargin;` to `double upper = range.getUpperBound() - length * upperMargin;`. The test suite successfully detected this change, causing the test case `testExpandWithPositiveMargins()` to fail.
+    
+    Analysis:
+    - The `testExpandWithPositiveMargins()` test case effectively detected and killed a mutant that introduced a fault by altering the logic in the upper margin calculation within the `expand` method.
+    - This mutation is critical as it affects the computation of the upper bound of the expanded range.
+    - The test case's failure indicates that it expects a specific behavior from the `expand` method, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the computation logic inside the `expand` method to identify changes in margin calculation.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**7. KILLED: Test Case: `testShiftWithAllowZeroCrossingFalse()`**
+
+    PIT Report: Killed Mutant (Modified Shift Logic with Allow Zero Crossing False)
+    The PIT report indicates that a mutant with the description "Modified Shift Logic with Allow Zero Crossing False" was killed. This mutation involved modifying the shift logic when the `allowZeroCrossing` flag is set to `false` within the `shift` method. For instance, changing `return new Range(shiftWithNoZeroCrossing(base.getLowerBound(), delta), shiftWithNoZeroCrossing(base.getUpperBound(), delta));` to `return new Range(base.getLowerBound() + delta, shiftWithNoZeroCrossing(base.getUpperBound(), delta));`. The test suite successfully detected this change, causing the test case `testShiftWithAllowZeroCrossingFalse()` to fail.
+    
+    Analysis:
+    - The `testShiftWithAllowZeroCrossingFalse()` test case effectively detected and killed a mutant that introduced a fault by modifying the shift logic with `allowZeroCrossing` set to `false` within the `shift` method.
+    - This mutation is significant as it alters the logic for shifting the range without allowing zero crossing.
+    - The test case's failure indicates that it expects a specific behavior from the `shift` method when `allowZeroCrossing` is set to `false`, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the conditions inside the `shift` method to identify changes in shift logic.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**8. KILLED: Test Case: `testHashCodeConsistency()`**
+
+    PIT Report: Killed Mutant (Altered Hash Code Computation)
+    The PIT report indicates that a mutant with the description "Altered Hash Code Computation" was killed. This mutation involved altering the hash code computation logic within the `hashCode` method. For example, changing `result = 29 * result + (int) (temp ^ (temp >>> 32));` to `result = 31 * result + (int) (temp ^ (temp >>> 32));`. The test suite successfully detected this change, causing the test case `testHashCodeConsistency()` to fail.
+    
+    Analysis:
+    - The `testHashCodeConsistency()` test case effectively detected and killed a mutant that introduced a fault by altering the hash code computation logic within the `hashCode` method.
+    - This mutation is significant as it affects the hash code generation, potentially leading to inconsistent or incorrect hash codes.
+    - The test case's failure indicates that it expects a specific behavior from the `hashCode` method, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the hash code computation inside the `hashCode` method to identify changes in computation logic.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**9. KILLED: Test Case: `testHashCodeWithSameRangeObjects()`**
+
+    PIT Report: Killed Mutant (Changed Multiplication Factor)
+    The PIT report indicates that a mutant with the description "Changed Multiplication Factor" was killed. This mutation involved altering the multiplication factor within the `hashCode` method. For example, changing `result = 29 * result + (int) (temp ^ (temp >>> 32));` to `result = 31 * result + (int) (temp ^ (temp >>> 32));`. The test suite successfully detected this change, causing the test case `testHashCodeWithSameRangeObjects()` to fail.
+    
+    Analysis:
+    - The `testHashCodeWithSameRangeObjects()` test case effectively detected and killed a mutant that introduced a fault by changing the multiplication factor within the `hashCode` method.
+    - This mutation is significant as it affects the hash code generation, potentially leading to inconsistent or incorrect hash codes.
+    - The test case's failure indicates that it expects a specific behavior from the `hashCode` method, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the hash code computation inside the `hashCode` method to identify changes in computation logic.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently being tested.
+
+**10. KILLED: Test Case: `testHashCodeWithDifferentRanges()`**
+
+    PIT Report: Killed Mutant (Altered Hash Code Calculation)
+    The PIT report indicates that a mutant with the description "Altered Hash Code Calculation" was killed. This mutation involved changing the hash code calculation logic within the `hashCode` method. For example, altering `result = 29 * result + (int) (temp ^ (temp >>> 32));` to `result = 31 * result + (int) (temp ^ (temp >>> 32));`. The test suite successfully detected this change, causing the test case `testHashCodeWithDifferentRanges()` to fail.
+    
+    Analysis:
+    - The `testHashCodeWithDifferentRanges()` test case effectively detected and killed a mutant that introduced a fault by altering the hash code calculation logic within the `hashCode` method.
+    - This mutation is significant as it affects the hash code generation, potentially leading to inconsistent or incorrect hash codes.
+    - The test case's failure indicates that it expects a specific behavior from the `hashCode` method, which is violated by the mutated logic.
+    - Since the mutant was killed, it suggests that the test suite adequately covers the hash code computation inside the `hashCode` method to identify changes in computation logic.
+    - However, if the PIT summary report indicated low overall mutation coverage, it's crucial to enhance the test suite's coverage by considering more edge cases or logical paths within the code that are not currently tested.
+
+
+
 # Report all the statistics and the mutation score for each test class
 
+**Data Utilities Test**
+Original Test Suite:
+<img width="863" alt="Screenshot 2024-03-18 at 4 59 14 PM" src="https://github.com/seng438-winter-2024/seng438-a4-IshaHaider/assets/66149883/c88c38af-cff8-4552-aa11-5b78ecc3d07c">
+
+Improved Test Suite
 
 
 # Analysis drawn on the effectiveness of each of the test classes
