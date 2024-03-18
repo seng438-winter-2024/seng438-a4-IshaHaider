@@ -139,8 +139,10 @@ In this laboratory, students are introduced to the nuanced field of software tes
 # Report all the statistics and the mutation score for each test class
 
 **Data Utilities Test**
+
+
 Original Test Suite:
-<img width="863" alt="Screenshot 2024-03-18 at 4 59 14 PM" src="https://github.com/seng438-winter-2024/seng438-a4-IshaHaider/assets/66149883/c88c38af-cff8-4552-aa11-5b78ecc3d07c">
+<img width="863" src="./media/Original Test Suite.png" alt="Original Test Suite">
 
 Improved Test Suite
 
